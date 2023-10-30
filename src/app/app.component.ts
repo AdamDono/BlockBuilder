@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -10,9 +10,9 @@ export class AppComponent {
 
  registerForm = this.fb.group({
 
-  username: '',
-  password: '',
-  email: '',
+  username: ['',Validators.required],
+  password:['',Validators.required],
+  email: ['', [Validators.required, Validators.email]],
 
  });
 register: FormGroup<any> | undefined;
@@ -21,7 +21,11 @@ register: FormGroup<any> | undefined;
   constructor (private fb: FormBuilder) {}
 
   onSubmit(): void {
-console.log('Submitted form', this.registerForm.value); 
+console.log('Submitted form', 
+this.registerForm.value,
+this.registerForm.invalid);
+
+
 
   }
     
