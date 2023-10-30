@@ -14,17 +14,36 @@
 
           <div class="field">
             <label class="label">Username</label>
-            <input type="text" class="input" formControlName="username"/> 
+            <input type="text" class="input" formControlName="username" [class.invalid]="registerForm.get('username')
+            ?.invalid &&(registerForm.get('username')?.dirty || registerForm.get('username')?.touched || isSubmitted ) " /> 
+
+
+<span *ngIf="registerForm.get('username')
+?.invalid &&(registerForm.get('username')?.dirty || registerForm.get('username')?.touched || isSubmitted)" class="error" >This Field Is Required</span>
+
+
           </div>  
           
           <div class="field">
             <label class="label">password</label>
-            <input type="text" class="input" formControlName="password"/> 
+            <input type="text" class="input" formControlName="password" [class.invalid]="registerForm.get('password')
+            ?.invalid &&(registerForm.get('password')?.dirty || registerForm.get('password')?.touched) " />  
+            <span *ngIf="registerForm.get('password')
+            ?.invalid &&(registerForm.get('password')?.dirty || registerForm.get('password')?.touched || isSubmitted)" class="error" >This Field Is Required</span>
+            
+            
           </div>  
           
           <div class="field">
             <label class="label">email</label>
-            <input type="text" class="input" formControlName="email"/> 
+            <input type="text" class="input" formControlName="email" [class.invalid]="registerForm.get('email')
+            ?.invalid &&(registerForm.get('email')?.dirty || registerForm.get('email')?.touched) " /> 
+
+
+<span *ngIf="registerForm.get('email')
+?.invalid &&(registerForm.get('email')?.dirty || registerForm.get('email')?.touched || isSubmitted)" class="error" >This Field Is Required</span>
+
+
           </div>  
 
           <div>

@@ -18,6 +18,8 @@ export class AppComponent {
 register: FormGroup<any> | undefined;
 
   title: any;
+
+  isSubmitted= false; 
   constructor (private fb: FormBuilder) {}
 
   onSubmit(): void {
