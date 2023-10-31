@@ -1,7 +1,4 @@
-.log {
-    margin-top: 80px;
-    margin-bottom: 50px;
-}
+
 
 .input{
     width: 380px;
@@ -11,3 +8,36 @@
 .button{
     width: 380px;
 }
+
+
+.container {
+    display: flex;
+
+    margin-bottom: 50px;
+  }
+  
+  .form-container {
+    flex: 1;
+    padding: 20px; /* Adjust padding as needed */
+
+  }
+  
+  .image-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+  }
+  
+
+  .h{
+  align-content: center;
+  }

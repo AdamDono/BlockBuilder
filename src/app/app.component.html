@@ -10,52 +10,61 @@
   <div class="card  shadow-lg p-3 mb-5   rounded mx-auto p-2  mt-1 "  style="width: 80%;">
     <div class="card-body">
 
-   <h3>Log in into your account</h3>
+ 
+  <div class="container">
+    <div class="form-container">
+     
+   <h3 class="log d-flex justify-content-center " >Log in into your account</h3>
       
-        <form class="form " [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+   <form class="form " [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
-          <div class="field row">
-            <label class="label mt-3 ">Username</label>
-            <input type="text" class="input" formControlName="username" placeholder="Enter UserName" [class.invalid]="registerForm.get('username')
-            ?.invalid &&(registerForm.get('username')?.dirty || registerForm.get('username')?.touched || isSubmitted ) " /> 
+     <div class="field row">
+       <label class="label mt-3 ">Username</label>
+       <input type="text" class="input" formControlName="username" placeholder="Enter UserName" [class.invalid]="registerForm.get('username')
+       ?.invalid &&(registerForm.get('username')?.dirty || registerForm.get('username')?.touched || isSubmitted ) " /> 
 
 
 <span *ngIf="registerForm.get('username')
 ?.invalid &&(registerForm.get('username')?.dirty || registerForm.get('username')?.touched || isSubmitted)" class="error" >This Field Is Required</span>
 
 
-          </div>  
-          
-          <div class="field row ">
-            <label class="label mt-3">Password</label>
-            <input type="text " class="input" formControlName="password" placeholder="Enter Your PassWord"  [class.invalid]="registerForm.get('password')
-            ?.invalid &&(registerForm.get('password')?.dirty || registerForm.get('password')?.touched) " />  
-            <span *ngIf="registerForm.get('password')
-            ?.invalid &&(registerForm.get('password')?.dirty || registerForm.get('password')?.touched || isSubmitted)" class="error" >This Field Is Required</span>
-            
-            
-          </div>  
-         
-          <div class="field row ">
-            <label class="label mt-3">Email</label>
-            <input type="text" class="input " formControlName="email" placeholder="Enter Your Email"  [class.invalid]="registerForm.get('email')
-            ?.invalid &&(registerForm.get('email')?.dirty || registerForm.get('email')?.touched) " /> 
+     </div>  
+     
+     <div class="field row ">
+       <label class="label mt-3">Password</label>
+       <input type="text " class="input" formControlName="password" placeholder="Enter Your PassWord"  [class.invalid]="registerForm.get('password')
+       ?.invalid &&(registerForm.get('password')?.dirty || registerForm.get('password')?.touched) " />  
+       <span *ngIf="registerForm.get('password')
+       ?.invalid &&(registerForm.get('password')?.dirty || registerForm.get('password')?.touched || isSubmitted)" class="error" >This Field Is Required</span>
+       
+       
+     </div>  
+    
+     <div class="field row ">
+       <label class="label mt-3">Email</label>
+       <input type="text" class="input " formControlName="email" placeholder="Enter Your Email"  [class.invalid]="registerForm.get('email')
+       ?.invalid &&(registerForm.get('email')?.dirty || registerForm.get('email')?.touched) " /> 
 
 
 <span *ngIf="registerForm.get('email')
 ?.invalid &&(registerForm.get('email')?.dirty || registerForm.get('email')?.touched || isSubmitted)" class="error" >This Field Is Required</span>
 
 
-          </div>  
+     </div>  
 
-          <div>
-            <button type="submit " class="button mt-3 btn btn-primary " > register</button>
-          </div>
+     <div>
+       <button type="submit " class="button mt-3 btn btn-primary " > register</button>
+     </div>
 
-       </form>
-
-      </div>
+  
+  </form>
+    </div>
+    <div class="image-container">
+      <img src="path_to_your_image.jpg" alt="Your Image" />
+    </div>
   </div>
 
 
-  
+      </div>    
+  </div>
+
