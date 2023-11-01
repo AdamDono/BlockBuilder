@@ -13,6 +13,7 @@ export class AppComponent {
   username: ['',Validators.required],
   password:['',Validators.required],
   email: ['', [Validators.required, Validators.email]],
+  phone:['',Validators.required],
 
  });
 register: FormGroup<any> | undefined;

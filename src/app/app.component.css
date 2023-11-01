@@ -1,33 +1,44 @@
 
-
+.log{
+    margin-bottom: 36px;
+    margin-top: 52px;
+}
 .input{
-    width: 380px;
+    height: 40px;
+    width: 508px;
     margin-left: 12px;
+border-radius: 50px;
+
+
 }
 
+.field{
+    margin-top: 10px;
+}
+.label{
+    margin-top: 10px;
+}
 .button{
-    width: 380px;
+    width: 508px;
+    margin-top: 19px;
 }
 
 
 .container {
     display: flex;
-
     margin-bottom: 50px;
   }
   
   .form-container {
     flex: 1;
-    padding: 20px; /* Adjust padding as needed */
+margin-right: 200opx;
 
   }
   
   .image-container {
     flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: center;
-  
+
   }
   
   .image-container img {

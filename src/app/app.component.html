@@ -1,8 +1,7 @@
 
 
-<div class="form">
 
-  <div class="log d-flex justify-content-center "><h1>sdtfygjhk</h1>
+  <div class="log d-flex justify-content-center  "><h1>sdtfygjhk</h1>
 
   </div>
   
@@ -19,8 +18,8 @@
    <form class="form " [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 
      <div class="field row">
-       <label class="label mt-3 ">Username</label>
-       <input type="text" class="input" formControlName="username" placeholder="Enter UserName" [class.invalid]="registerForm.get('username')
+       <label class="label  ">Username</label>
+       <input type="text" class="input mt-1 " formControlName="username" placeholder="Enter UserName" [class.invalid]="registerForm.get('username')
        ?.invalid &&(registerForm.get('username')?.dirty || registerForm.get('username')?.touched || isSubmitted ) " /> 
 
 
@@ -31,8 +30,8 @@
      </div>  
      
      <div class="field row ">
-       <label class="label mt-3">Password</label>
-       <input type="text " class="input" formControlName="password" placeholder="Enter Your PassWord"  [class.invalid]="registerForm.get('password')
+       <label class="label ">Password</label>
+       <input type="text " class="input mt-1  " formControlName="password" placeholder="Enter Your PassWord"  [class.invalid]="registerForm.get('password')
        ?.invalid &&(registerForm.get('password')?.dirty || registerForm.get('password')?.touched) " />  
        <span *ngIf="registerForm.get('password')
        ?.invalid &&(registerForm.get('password')?.dirty || registerForm.get('password')?.touched || isSubmitted)" class="error" >This Field Is Required</span>
@@ -41,8 +40,8 @@
      </div>  
     
      <div class="field row ">
-       <label class="label mt-3">Email</label>
-       <input type="text" class="input " formControlName="email" placeholder="Enter Your Email"  [class.invalid]="registerForm.get('email')
+       <label class="label ">Email</label>
+       <input type="text" class="input mt-1  " formControlName="email" placeholder="Enter Your Email"  [class.invalid]="registerForm.get('email')
        ?.invalid &&(registerForm.get('email')?.dirty || registerForm.get('email')?.touched) " /> 
 
 
@@ -52,8 +51,20 @@
 
      </div>  
 
+     <div class="field row ">
+      <label class="label ">Phone Number</label>
+      <input type="text" class="input mt-1  " formControlName="phone" placeholder="Enter Your Phone Number"  [class.invalid]="registerForm.get('phone')
+      ?.invalid &&(registerForm.get('phone')?.dirty || registerForm.get('phone')?.touched) " /> 
+
+
+<span *ngIf="registerForm.get('phone')
+?.invalid &&(registerForm.get('phone')?.dirty || registerForm.get('phone')?.touched || isSubmitted)" class="error" >This Field Is Required</span>
+
+
+    </div>  
+
      <div>
-       <button type="submit " class="button mt-3 btn btn-primary " > register</button>
+       <button type="submit " class="button btn btn-primary " > register</button>
      </div>
 
   
