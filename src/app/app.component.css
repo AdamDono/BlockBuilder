@@ -54,7 +54,9 @@ border-radius:10px ;
   align-content: center;
   }
 
-
+.login{
+    color: blue;
+}
 
 /* Media query for responsiveness */
 @media (max-width: 768px) {
